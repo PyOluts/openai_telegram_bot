@@ -1,14 +1,14 @@
-from  config TG_BOT_API_KEY
-from telegram.ext import ApplicationBuilder,CommandHandler,Context
+from  config import TG_BOT_API_KEY
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from utils import load_massage_for_bot
 
-async def start(update: Update,context:Context):
+
+
+async def start(update: Update,context:ContextTypes):
     text = load_massage_for_bot('main')
-    await update.message.reply_text("shiiiiiiiiiish")
+    await update.message.reply_text(text)
 
-
-app=ApplicationBuilder().build()
-app.token(ApplicationBuilder).token(TG_BOT_API_KEY).build()
-
-app.add_handler(CommandHandler("start", start))
+app=ApplicationBuilder().token(TG_BOT_API_KEY).build()
+app.add_handler(CommandHandler("start",start))
 app.run_polling()
