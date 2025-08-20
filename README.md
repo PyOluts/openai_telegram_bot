@@ -41,7 +41,7 @@ Run the bot:
 Commands:
 ---------
 /start - Start the bot and show main menu
-
+/random -Give u random fact or  some fact in random.txt
 Notes:
 ------
 - Ensure you have the correct folder structure.
@@ -50,4 +50,4 @@ Notes:
 
 Author:
 -------
-Your Name
+Olexander Lutskin
