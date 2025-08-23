@@ -51,6 +51,8 @@ async def random_fact(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     await target.reply_text(fact, reply_markup=main_keyboard())
+from telegram.ext import MessageHandler, filters
+
 
 
 
